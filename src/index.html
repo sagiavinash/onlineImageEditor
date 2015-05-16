@@ -21,24 +21,84 @@
     <canvas id="image-generator" class="hidden"></canvas>
   </div>
 </section>
-<section id="filters-sidebar">
-  <section id="dimensions-wrap">
-    <p id="dimensions-original">Original Size - <br>W: <span>1366</span>px,  H: <span>768</span>px</p>
-    <div id="dimensions" class="cf">
-      <div class="input-wrap cf">
-        <span class="input-label">Width</span>
-        <input id="set-width" class="input-value" type="text">
-        <span class="input-unit">px</span>
-      </div>
-      <div class="input-wrap cf">
-        <span class="input-label">Height</span>
-        <input type="text" class="input-value" id="set-height">
-        <span class="input-unit">px</span>
+<section id="tool-panel">
+  <div class="tool-panel-widget">
+    <div class="tool-panel-header">
+      <p class="tool-panel-title">Original Image Properties</p>
+    </div>
+    <div class="tool-panel-body">
+      <div id="dimensions-original" class="tool-panel-content cf">
+        <div class="property-descriptor fl">
+          <span class="property-label fl">Width :</span>
+          <span id="orginal-width" class="property-value fl">1366</span>
+          <span class="property-unit fl">px</span>
+        </div>
+        <span class="property-seperator fl">,</span>
+        <div class="property-descriptor fl">
+          <span class="property-label fl">Height :</span>
+          <span id="orginal-height" class="property-value fl">768</span>
+          <span class="property-unit fl">px</span>
+        </div>
       </div>
     </div>
-    <input type="checkbox" name="aspect-ratio" id="set-aspect-ratio" checked="true">
-    <label id="img-height" for="set-aspect-ratio">Aspect Ratio</label>
-  </section>
+  </div>
+  <div id="resize-image-widget" class="tool-panel-widget">
+    <div class="tool-panel-header">
+      <p class="tool-panel-title">Resize Image</p>
+    </div>
+    <div class="tool-panel-body">
+      <div id="dimensions" class="cf">
+        <div class="input-wrap cf">
+          <span class="input-label">Width :</span>
+          <input id="set-width" class="input-value" type="text">
+          <span class="input-unit">px</span>
+        </div>
+        <span class="input-seperator">,</span>
+        <div class="input-wrap cf">
+          <span class="input-label">Height :</span>
+          <input type="text" class="input-value" id="set-height">
+          <span class="input-unit">px</span>
+        </div>
+      </div>
+      <div id="set-aspect-ratio-wrap">
+        <input type="checkbox" name="aspect-ratio" id="set-aspect-ratio" checked="true">
+        <label for="set-aspect-ratio">Fix Aspect Ratio</label>
+      </div>
+    </div>
+  </div>
+  <div id="edit-canvas-widget" class="tool-panel-widget">
+    <div class="tool-panel-header">
+      <p class="tool-panel-title">Cropping / Padding</p>
+    </div>
+    <div class="tool-panel-body">
+      <form class="cf">
+        <div class="property-group cf">
+          <div class="property-option fl cf">
+            <input type="radio" name="edit-image" id="cropping-on" checked="true">
+            <label for="cropping-on">Cropping</label>
+          </div>
+          <div class="property-option fl cf">
+            <input type="radio" name="edit-image" id="padding-on">
+            <label for="padding-on">Padding</label>
+          </div>
+        </div>
+        <div class="canvas-layout cropping border-box">
+          <div class="editing border-box">
+            <div class="label" data-labels="Cropping, Padding">Padding</div>
+            <input type="text" class="top">
+            <br>
+            <input type="text" class="left">
+            <div class="content border-box">         
+              <span>Final</span>
+            </div>
+            <input type="text" class="right">
+            <br>
+            <input type="text" class="bottom">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="script.js"></script>

@@ -77,10 +77,10 @@ var imageEditor = {
 			IE_model.changes = imageEditor.model.changes;
 
 			if(IE_model.changes.isRatioFixed) {
-				IE_model.current.height = IE_model.current.width * IE_model.current.aspectRatio;
+				IE_model.current.height = IE_model.current.width / IE_model.current.aspectRatio;
 			}
 			IE_model.current = $.extend(IE_model.current, IE_model.changes);
-			imageEditor.view.filters.render();
+			imageEditor.view.tools.render();
 			imageEditor.view.canvas.render();
 		}
 	},
@@ -95,40 +95,48 @@ var imageEditor = {
 		"clipboard" : {}
 	},
 	"view" : {
-		"filters" : {
+		"tools" : {
 			"render" : function () {
 				var IE_model = imageEditor.model;
 				if ($.isEmptyObject(IE_model.current)) {
 
 				}
-				if ("width" in IE_model.changes) {
-					if (IE_model.current.isRatioFixed) {
-						IE_model.current.height = Math.round(IE_model.changes.width / IE_model.image.aspectRatio);
-					}
-					if (!IE_model.clipboard.firstRender) {
-						IE_model.current.dataURI = imageEditor.image.resize();
-					}
-					$("#set-width").val(IE_model.current.width);
-					$("#set-height").val(IE_model.current.height);
-				}
-				if ("height" in IE_model.changes) {
-					if (IE_model.current.isRatioFixed) {
-						IE_model.current.width = Math.round(IE_model.changes.height * IE_model.image.aspectRatio);
-					}
-					if (!IE_model.clipboard.firstRender) {
-						IE_model.current.dataURI = imageEditor.image.resize();
-					}
-					$("#set-width").val(IE_model.current.width);
-					$("#set-height").val(IE_model.current.height);
-				}
-				if ("isRatioFixed" in IE_model.changes) {
-					if (IE_model.changes.isRatioFixed && IE_model.current.width) {
-						$("#set-height").val(IE_model.current.height);
+				(function resizeImageChanges() {
+					if ("width" in IE_model.changes) {
+						if (IE_model.current.isRatioFixed) {
+							IE_model.current.height = Math.round(IE_model.changes.width / IE_model.image.aspectRatio);
+						}
 						if (!IE_model.clipboard.firstRender) {
 							IE_model.current.dataURI = imageEditor.image.resize();
 						}
+						$("#set-width").val(IE_model.current.width);
+						$("#set-height").val(IE_model.current.height);
 					}
-				}
+					if ("height" in IE_model.changes) {
+						if (IE_model.current.isRatioFixed) {
+							IE_model.current.width = Math.round(IE_model.changes.height * IE_model.image.aspectRatio);
+						}
+						if (!IE_model.clipboard.firstRender) {
+							IE_model.current.dataURI = imageEditor.image.resize();
+						}
+						$("#set-width").val(IE_model.current.width);
+						$("#set-height").val(IE_model.current.height);
+					}
+					if ("isRatioFixed" in IE_model.changes) {
+						if (IE_model.changes.isRatioFixed && IE_model.current.width) {
+							$("#set-height").val(IE_model.current.height);
+							if (!IE_model.clipboard.firstRender) {
+								IE_model.current.dataURI = imageEditor.image.resize();
+							}
+						}
+					}
+					if (IE_model.current.width !== IE_model.image.width ||
+						IE_model.current.height !== IE_model.image.height) {
+						$("#resize-image-widget").addClass("used");
+					} else {
+						$("#resize-image-widget").removeClass("used");
+					}
+				}());
 			}
 		},
 		"canvas" : {
@@ -136,6 +144,8 @@ var imageEditor = {
 				var IE_model = imageEditor.model;
 
 				if (IE_model.clipboard.firstRender) {
+					$("#orginal-width").text(IE_model.image.width);
+					$("#orginal-height").text(IE_model.image.height);
 					$("#image-generated").removeClass("hidden").attr("title" , IE_model.changes.title);
 					$("#image-upload").addClass("hidden");
 					IE_model.clipboard.firstRender = false;
@@ -147,8 +157,8 @@ var imageEditor = {
 		"reLayout" : function () {
 			var viewportWidth = window.innerWidth,
 				viewportheight = window.innerHeight,
-				filtersSidebarWidth = 320, imageCanvasWidth;
-			imageCanvasWidth = viewportWidth - filtersSidebarWidth;
+				toolPanelWidth = 320, imageCanvasWidth;
+			imageCanvasWidth = viewportWidth - toolPanelWidth;
 			$("#image-preview-wrap").outerWidth(imageCanvasWidth);
 			$("#image-preview-wrap").outerHeight(viewportheight);
 		}
