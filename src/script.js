@@ -51,7 +51,6 @@ var imageEditor = {
 					IE_model.changes.width = Math.round($(this).val());
 					IE_model.changes.dataURI = imageEditor.image.resize();
 					imageEditor.controller.updateModel();
-
 				});
 
 				$("#set-height").on("change", function () {
@@ -63,6 +62,19 @@ var imageEditor = {
 				$("#set-aspect-ratio").on("change", function () {
 					IE_model.changes.isRatioFixed = $(this).is(":checked");
 					imageEditor.controller.updateModel();
+				});
+
+				$('input[name="edit-image"]').on("change", function () {
+					IE_model.changes.editImage = IE_model.changes.editImage || {};
+					IE_model.changes.editImage.type = $(this).val();
+				    imageEditor.controller.updateModel();
+				});
+				$('#edit-canvas-widget .editing input[type="text"]').on("change", function () {
+					var editImage = {};
+						sign = ($('input[name="edit-image"]:checked').val() == "cropping") ? "+" : "-";
+					IE_model.changes.editImage = IE_model.changes.editImage || {};
+					IE_model.changes.editImage[$(this).attr("class")] = Number(sign + $(this).val());
+				    imageEditor.controller.updateModel();
 				});
 			}());
 		},
@@ -137,6 +149,39 @@ var imageEditor = {
 						$("#resize-image-widget").removeClass("used");
 					}
 				}());
+
+				(function editImageChanges() {
+					var crop = {}, isEdited = 0;
+					if ("editImage" in IE_model.changes) {
+						if (IE_model.changes.editImage.type == "cropping") {
+							$("#edit-canvas-widget .canvas-layout").addClass("cropping").removeClass("padding");
+						} else if (IE_model.changes.editImage.type == "padding") {
+							$("#edit-canvas-widget .canvas-layout").addClass("padding").removeClass("cropping");
+						}
+
+						$.each(["top", "right", "bottom", "left"], function (i, edge) {
+							isEdited += (edge in IE_model.current.editImage);
+						});
+						if (isEdited) {
+							$.extend(crop, {
+								"dataURI" : IE_model.image.dataURI,
+								"top" : IE_model.current.editImage.top || 0,
+								"right" : IE_model.current.editImage.right || 0,
+								"bottom" : IE_model.current.editImage.bottom || 0,
+								"left" : IE_model.current.editImage.left || 0
+							});
+							$.extend(crop, {
+								"X" : crop.left,
+								"Y" : crop.top,
+								"width" : IE_model.image.width - (crop.left + crop.right),
+								"height" : IE_model.image.height - (crop.top + crop.bottom)
+							});
+							IE_model.current.dataURI = imageEditor.image.crop(crop.dataURI, crop.X, crop.Y, crop.width, crop.height);
+						}
+
+						$("edit-canvas-widget").addClass("used");
+					}
+				}());
 			}
 		},
 		"canvas" : {
@@ -175,20 +220,15 @@ var imageEditor = {
 			resize_canvas.getContext('2d').drawImage(resize_image, 0, 0, IE_model.current.width, IE_model.current.height);
 			return resize_canvas.toDataURL();
 		},
-		"crop" : function(dataURI, sourceX, sourceY, sourceWidth, sourceHeight) {
-			var canvas = document.createElement('canvas'),
-				context = canvas.getContext('2d'),
+		"crop" : function(dataURI, X, Y, width, height) {
+			var IE_model = imageEditor.model,
+				edit_canvas = document.createElement('canvas'),
 				imageObj = new Image();
-			//  var sourceX = 150,
-			// 	sourceY = 0,
-			// 	sourceWidth = 150,
-			// 	sourceHeight = 150;
-			var destWidth = sourceWidth,
-				destHeight = sourceHeight,
-				destX = canvas.width / 2 - destWidth / 2,
-				destY = canvas.height / 2 - destHeight / 2;
-			context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
-			return canvas.toDataURL();
+			edit_canvas.width = width;
+			edit_canvas.height = height;
+			imageObj.src = dataURI;
+			edit_canvas.getContext('2d').drawImage(imageObj, X, Y, width, height, 0, 0, width, height);
+			return edit_canvas.toDataURL();
 		}
 	}
 };

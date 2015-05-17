@@ -193,6 +193,7 @@ body {
   display: none;
   margin-top: 10px;
   font-size: 14px;
+  text-align: center;
 }
 
 #edit-canvas-widget .canvas-layout.cropping,
@@ -200,7 +201,7 @@ body {
   display: block;
 }
 #edit-canvas-widget .canvas-layout .editing {
-  border: 1px grey dashed;
+  border: 1px gray solid;
   background-color: #848484;
   display: inline-block;
   text-align: center;
@@ -209,17 +210,17 @@ body {
 }
 
 #edit-canvas-widget .canvas-layout.cropping .editing {
-  background: -webkit-repeating-linear-gradient(-45deg, #666, #666 5px, #D35252 5px, #D35252 20px);
-  background: -moz-repeating-linear-gradient(-45deg, #666, #666 5px, #D35252 5px, #D35252 20px);
-  background: -o-repeating-linear-gradient(-45deg, #666, #666 5px, #D35252 5px, #D35252 20px);
-  background: repeating-linear-gradient(-45deg, #666, #666 5px, #D35252 5px, #D35252 20px);
+  background: -webkit-repeating-linear-gradient(-45deg, #fff, #fff 5px, #D35252 5px, #D35252 20px);
+  background: -moz-repeating-linear-gradient(-45deg, #fff, #fff 5px, #D35252 5px, #D35252 20px);
+  background: -o-repeating-linear-gradient(-45deg, #fff, #fff 5px, #D35252 5px, #D35252 20px);
+  background: repeating-linear-gradient(-45deg, #fff, #fff 5px, #D35252 5px, #D35252 20px);
 }
 
 #edit-canvas-widget .canvas-layout.padding .editing {
-  background: -webkit-repeating-linear-gradient(-45deg, #666, #666 5px, #5DBE31 5px, #5DBE31 20px);
-  background: -moz-repeating-linear-gradient(-45deg, #666, #666 5px, #5DBE31 5px, #5DBE31 20px);
-  background: -o-repeating-linear-gradient(-45deg, #666, #666 5px, #5DBE31 5px, #5DBE31 20px);
-  background: repeating-linear-gradient(-45deg, #666, #666 5px, #5DBE31 5px, #5DBE31 20px);
+  background: -webkit-repeating-linear-gradient(-45deg, #fff, #fff 5px, #53B029 5px, #53B029 20px);
+  background: -moz-repeating-linear-gradient(-45deg, #fff, #fff 5px, #53B029 5px, #53B029 20px);
+  background: -o-repeating-linear-gradient(-45deg, #fff, #fff 5px, #53B029 5px, #53B029 20px);
+  background: repeating-linear-gradient(-45deg, #fff, #fff 5px, #53B029 5px, #53B029 20px);
 }
 
 #edit-canvas-widget .canvas-layout .content {
@@ -250,9 +251,10 @@ body {
 }
 
 #edit-canvas-widget .canvas-layout input{
-  width:50px;
+  width:40px;
   height:20px;
   border:1px solid #aaa;
+  text-align: center;
 }
 
 #edit-canvas-widget .canvas-layout .left {

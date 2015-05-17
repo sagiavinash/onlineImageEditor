@@ -74,22 +74,21 @@
       <form class="cf">
         <div class="property-group cf">
           <div class="property-option fl cf">
-            <input type="radio" name="edit-image" id="cropping-on" checked="true">
+            <input type="radio" name="edit-image" id="cropping-on" value="cropping">
             <label for="cropping-on">Cropping</label>
           </div>
           <div class="property-option fl cf">
-            <input type="radio" name="edit-image" id="padding-on">
+            <input type="radio" name="edit-image" id="padding-on" value="padding">
             <label for="padding-on">Padding</label>
           </div>
         </div>
-        <div class="canvas-layout cropping border-box">
+        <div class="canvas-layout border-box">
           <div class="editing border-box">
-            <div class="label" data-labels="Cropping, Padding">Padding</div>
             <input type="text" class="top">
             <br>
             <input type="text" class="left">
-            <div class="content border-box">         
-              <span>Final</span>
+            <div class="content border-box">
+              <span data-labels="Final,Padding"></span>
             </div>
             <input type="text" class="right">
             <br>
