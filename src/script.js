@@ -88,6 +88,9 @@ var imageEditor = {
 			IE_model.current = imageEditor.model.current;
 			IE_model.changes = imageEditor.model.changes;
 
+			IE_model.history.hash.push(JSON.stringify(IE_model.changes));
+			IE_model.history.actions.push($.extend({},IE_model.changes));
+			
 			if(IE_model.changes.isRatioFixed) {
 				IE_model.current.height = IE_model.current.width / IE_model.current.aspectRatio;
 			}
@@ -103,6 +106,14 @@ var imageEditor = {
 			"aspectRatio" : 1.5,
 			"width" : "150",
 			"height" : "100",
+		},
+		"history" : {
+			"hash" : [],
+			"actions" : [],
+			"image" : {
+				"dataURI" : [],
+				""
+			}
 		},
 		"clipboard" : {}
 	},
@@ -229,6 +240,11 @@ var imageEditor = {
 			imageObj.src = dataURI;
 			edit_canvas.getContext('2d').drawImage(imageObj, X, Y, width, height, 0, 0, width, height);
 			return edit_canvas.toDataURL();
+		}
+	},
+	"services" : {
+		"generateLabel" : function() {
+
 		}
 	}
 };
