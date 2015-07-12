@@ -1,0 +1,17 @@
+{
+  "name": "Image-Editor-ReactJS",
+  "version": "0.1.0",
+  "description": "Image Editor single page app using ReactJS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Sagi Avinash Varma",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
