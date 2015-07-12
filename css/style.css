@@ -89,6 +89,7 @@ body, #app {
   padding:10px;
   background: #f6f6f6;
   overflow: auto;
+  font-size: 14px;
 }
 
 #dimensions {
@@ -114,7 +115,6 @@ body, #app {
   border:1px solid #ccc;
   border-radius: 5px 0 0 5px;
   background: #fafafa;
-  font-size:14px;
   line-height:18px;
 }
 
@@ -140,7 +140,6 @@ body, #app {
   border:1px solid #ccc;
   border-radius: 0 5px 5px 0;
   background: #fafafa;
-  font-size:14px;
   line-height:18px;
 }
 

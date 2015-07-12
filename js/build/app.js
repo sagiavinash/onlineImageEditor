@@ -118,10 +118,8 @@ var ImageEditor = React.createClass({
                     if (inputs.isRatioFixed) {
                         changes.width = parseInt(IE_values.width, 10);
                         changes.height = (changes.width/IE_values.image.current.aspectRatio);
-                        changes.isRatioFixed = true;
-                    } else {
-                        changes.isRatioFixed = false;
                     }
+                    changes.isRatioFixed = inputs.isRatioFixed;
                 } else if (IE_values.isRatioFixed) {
                     if (inputs.width) {
                         changes.width = parseInt(inputs.width, 10);
@@ -136,6 +134,8 @@ var ImageEditor = React.createClass({
                 }
                 
                 changes.dataURI = IE.imageResize(IE_values.image.current.dataURI, changes.width || IE_values.width, changes.height || IE_values.height);
+            } else if (inputs.category === "imageCrop") {
+
             }
             // console.log("changes", changes);
         })();
