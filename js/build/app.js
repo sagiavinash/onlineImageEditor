@@ -2,32 +2,55 @@
 
 var IE = {
     "services" : {
-        "readImageData" : function(e) {
-            var dfd = $.Deferred(),
-                reader = new FileReader(),
-                imageFile = e.target.files[0],
-                imageData = {};
+        "image" : {
+            "readData" : function(e) {
+                var dfd = $.Deferred(),
+                    reader = new FileReader(),
+                    imageFile = e.target.files[0],
+                    imageData = {};
 
-            if (!imageFile.type.match('image.*')) return;
-            
-            reader.onload = function(e) {
-                var imgObj = new Image();
-                $.extend(imageData, {
-                    "dataURI" : e.target.result,
-                    "title" : imageFile.name
-                });
-                imgObj.src = e.target.result;
-                imgObj.onload = function() {
+                if (!imageFile.type.match('image.*')) return;
+                
+                reader.onload = function(e) {
+                    var imgObj = new Image();
                     $.extend(imageData, {
-                        "width" : parseInt(imgObj.width, 10),
-                        "height" : parseInt(imgObj.height,10),
-                        "aspectRatio" : (imgObj.width/imgObj.height)
+                        "dataURI" : e.target.result,
+                        "title" : imageFile.name
                     });
-                    dfd.resolve(imageData);
+                    imgObj.src = e.target.result;
+                    imgObj.onload = function() {
+                        $.extend(imageData, {
+                            "width" : parseInt(imgObj.width, 10),
+                            "height" : parseInt(imgObj.height,10),
+                            "aspectRatio" : (imgObj.width/imgObj.height)
+                        });
+                        dfd.resolve(imageData);
+                    };
                 };
-            };
-            reader.readAsDataURL(imageFile);
-            return dfd.promise();
+                reader.readAsDataURL(imageFile);
+                return dfd.promise();
+            },
+            "resize" : function(dataURI, width, height) {
+                var resize_canvas = document.createElement('canvas'),
+                    resize_image = new Image(),
+                    newDataURI;
+                resize_image.src = dataURI;
+                resize_canvas.width = width;
+                resize_canvas.height = height;
+
+                resize_canvas.getContext('2d').drawImage(resize_image, 0, 0, width, height);
+
+                return resize_canvas.toDataURL();
+            },
+            "withOffsets" : function(dataURI, X, Y, width, height) {
+                var edit_canvas = document.createElement('canvas'),
+                    imageObj = new Image();
+                edit_canvas.width = width;
+                edit_canvas.height = height;
+                imageObj.src = dataURI;
+                edit_canvas.getContext('2d').drawImage(imageObj, X, Y, width, height, 0, 0, width, height);
+                return edit_canvas.toDataURL();
+            }
         }
     }
 };
@@ -38,7 +61,7 @@ var ImageEditor = React.createClass({
 		var IE_component = this,
             newState = $.extend({}, this.state);
 
-        IE.services.readImageData(e).done(function(imageData) {
+        IE.services.image.readData(e).done(function(imageData) {
             IE_component.setState({
                 "UI" : {
                     "showUploader" : false
@@ -48,18 +71,27 @@ var ImageEditor = React.createClass({
                     "changes" : [{
                         "width" : imageData.width,
                         "height" : imageData.height,
-                        "aspectRatio" : imageData.aspectRatio
+                        "aspectRatio" : imageData.aspectRatio,
+                        "category" : "upload"
                     }]
                 },
                 "changes" : {
                     "width" : imageData.width,
                     "height" : imageData.height,
                     "aspectRatio" : imageData.aspectRatio,
+                    "category" : "upload"
                 },
                 "values" : {
                     "width" : imageData.width,
                     "height" : imageData.height,
                     "dataURI" : imageData.dataURI,
+                    "offsets" : {
+                        "top" : 0,
+                        "right" : 0,
+                        "bottom" : 0,
+                        "left" : 0
+                    },
+                    "isRatioFixed" : true,
                     "image" : {
                         "natural" : {
                             "width" : imageData.width,
@@ -73,46 +105,25 @@ var ImageEditor = React.createClass({
                             "height" : imageData.height,
                             "dataURI" : imageData.dataURI,
                             "aspectRatio" : imageData.aspectRatio,
+                            "offsets" : {
+                                "top" : 0,
+                                "right" : 0,
+                                "bottom" : 0,
+                                "left" : 0
+                            }
                         }
                     }
                 }
             });
         });
 	},
-    "imageResize" : function(dataURI, width, height) {
-        var resize_canvas = document.createElement('canvas'),
-            resize_image = new Image(),
-            newDataURI;
-        resize_image.src = dataURI;
-        resize_canvas.width = width;
-        resize_canvas.height = height;
-
-        resize_canvas.getContext('2d').drawImage(resize_image, 0, 0, width, height);
-
-        return resize_canvas.toDataURL();
-    },
-    "imageCrop" : function(dataURI, sourceX, sourceY, sourceWidth, sourceHeight) {
-        var canvas = document.createElement('canvas'),
-            context = canvas.getContext('2d'),
-            imageObj = new Image();
-        //  var sourceX = 150,
-        //  sourceY = 0,
-        //  sourceWidth = 150,
-        //  sourceHeight = 150;
-        var destWidth = sourceWidth,
-            destHeight = sourceHeight,
-            destX = canvas.width / 2 - destWidth / 2,
-            destY = canvas.height / 2 - destHeight / 2;
-        context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
-        return canvas.toDataURL();
-    },
     "applyFilterChanges" : function(inputs) {
-        var IE = this,
-            IE_values = this.state.values,
+        var IE_values = this.state.values,
             changes = {},
             newState = $.extend({}, this.state);
 
         (function getStateChangesFromInputs() {
+            var params = {};
             if (inputs.category === "imageResize") {
                 if ("isRatioFixed" in inputs) {
                     if (inputs.isRatioFixed) {
@@ -132,18 +143,66 @@ var ImageEditor = React.createClass({
                     if (inputs.width) changes.width = parseInt(inputs.width, 10);
                     if (inputs.height) changes.height = parseInt(inputs.height, 10);
                 }
-                
-                changes.dataURI = IE.imageResize(IE_values.image.current.dataURI, changes.width || IE_values.width, changes.height || IE_values.height);
-            } else if (inputs.category === "imageCrop") {
 
+                changes.dataURI = IE.services.image.resize(IE_values.image.current.dataURI, changes.width || IE_values.width, changes.height || IE_values.height);
+                
+                $.extend(newState.values, changes);
+                newState.changes = changes;
+                newState.changes.category = inputs.category;
+                newState.history.changes.push(changes);
+            } else if (inputs.category === "addOffsets") {
+                $.extend(params, {
+                    "X" : -inputs.left,
+                    "Y" : -inputs.top,
+                    "width" : IE_values.image.current.width + (inputs.left + inputs.right),
+                    "height" : IE_values.image.current.height + (inputs.top + inputs.bottom),
+                    "dataURI" : IE_values.image.current.dataURI
+                });
+                $.extend(true, changes, {
+                    "width" : params.width,
+                    "height" : params.height,
+                    "offsets" : {
+                        "top" : inputs.top,
+                        "left" : inputs.left,
+                        "right" : inputs.right,
+                        "bottom" : inputs.bottom,
+                    },
+                    "dataURI" : IE.services.image.withOffsets(params.dataURI, params.X, params.Y, params.width, params.height)
+                });
+                
+                var shouldCurrentChange = (function() {
+                    var imageDataChanges = newState.history.imageDataChanges,
+                        lastChangeId = imageDataChanges[imageDataChanges.length - 1],
+                        changesLength = newState.history.changes.length,
+                        imageAlterCategories = ["upload", "addOffsets"],
+                        result = false;
+                    for (i = lastChangeId; i < changesLength; i++) {
+                        if (newState.history.changes[i].category !== "addOffsets") {
+                            result = true;
+                        }
+                    }
+                    return result;
+                })();
+
+                if (shouldCurrentChange) {
+                    $.extend(true, newState.values, changes, {
+                        "image" : {
+                            "current" : changes
+                        }
+                    });
+    
+                }
+                
+                newState.changes = $.extend({}, changes, {
+                    "category" : inputs.category
+                });
+                newState.history.changes.push(changes);
+                if (shouldCurrentChange) {
+                    newState.history.imageDataChanges.push(newState.history.changes.length - 1);
+                }
             }
-            // console.log("changes", changes);
         })();
         
-        $.extend(newState.values, changes);
-        newState.changes = changes;
-        newState.history.changes.push(changes);
-
         this.setState(newState);
     },
 	getInitialState : function() {
@@ -157,12 +216,18 @@ var ImageEditor = React.createClass({
                     "natural" : {
                         "dataURI" : "#",
                         "width" : 0,
-                        "height" : 0,
+                        "height" : 0
                     },
                     "current" : {
                         "dataURI" : "#",
                         "width" : 0,
                         "height" : 0,
+                        "offsets" : {
+                            "top" : 0,
+                            "right" : 0,
+                            "bottom" : 0,
+                            "left" : 0
+                        }
                     }
                 }
             }
@@ -239,11 +304,67 @@ var ImagePreview = React.createClass({
 });
 
 var FiltersSidebar = React.createClass({
+    "render" : function() {
+        var values = this.props.state.values,
+            original = {
+                "width" : values.image.natural.width,
+                "height" : values.image.natural.height
+            },
+            dimensions = {
+                "width" : values.width || 0,
+                "height" : values.height || 0
+            },
+            isRatioFixed = values.isRatioFixed,
+            offsets = values.offsets || {
+                "top" : 0,
+                "right" : 0,
+                "bottom" : 0,
+                "left" : 0
+            };
+        return (
+            <section id="tool-panel">
+                <OriginalDimensionsWidget original={original} />
+                <ResizeImageWidget dimensions={dimensions} isRatioFixed={isRatioFixed} onUserInput={this.props.onFilterApply}/>
+                <AddImageOffsetsWidget offsets={offsets} onUserInput={this.props.onFilterApply}/>
+            </section>
+        );
+    }
+});
+
+var OriginalDimensionsWidget = React.createClass({
+    "render" : function() {
+        var original = this.props.original;
+        return (
+            <section className="tool-panel-widget">
+                <div className="tool-panel-header">
+                  <p className="tool-panel-title">Original Image Properties</p>
+                </div>
+                <div className="tool-panel-body">
+                  <div id="dimensions-original" className="tool-panel-content cf">
+                    <div className="property-descriptor fl">
+                      <span className="property-label fl">Width: </span>
+                      <span id="orginal-width" className="property-value fl">{original.width}</span>
+                      <span className="property-unit fl">px</span>
+                    </div>
+                    <span className="property-seperator fl">,&nbsp;</span>
+                    <div className="property-descriptor fl">
+                      <span className="property-label fl">Height: </span>
+                      <span id="orginal-height" className="property-value fl">{original.height}</span>
+                      <span className="property-unit fl">px</span>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        );
+    }
+});
+
+var ResizeImageWidget = React.createClass({
     "DimValueChanged" : function(datapoint, value) {
         var inputs = {};
         inputs[datapoint] = value;
         inputs.category = "imageResize";
-        this.props.onFilterApply(inputs);
+        this.props.onUserInput(inputs);
     },
     "aspectRatioChanged" : function() {
         var values = this.props.state.values,
@@ -255,30 +376,27 @@ var FiltersSidebar = React.createClass({
         }
         inputs.category = "imageResize";
         // console.log("isRatioFixedChanged", change);
-        this.props.onFilterApply(inputs);
+        this.props.onUserInput(inputs);
     },
     "render" : function() {
-        var values = this.props.state.values,
-            original = {
-                "width" : values.image.natural.width,
-                "height" : values.image.natural.height
-            },
-            dimensions = {
-                "width" : values.width || 0,
-                "height" : values.height || 0
-            },
-            isRatioFixed = values.isRatioFixed;
+        var dimensions = this.props.dimensions,
+            isRatioFixed = this.props.isRatioFixed;
         return (
-            <section id="filters-sidebar">
-                <section id="dimensions-wrap">
-                    <p id="dimensions-original">Original Size - <br/>W: <span>{original.width}</span>px,  H: <span>{original.height}</span>px</p>
+            <section className="tool-panel-widget">
+                <div className="tool-panel-header">
+                    <p className="tool-panel-title">Resize Image</p>
+                </div>
+                <div className="tool-panel-body">
                     <div id="dimensions" className="cf">
                         <DimensionInput datapoint="width" onUserInput={this.DimValueChanged} value={dimensions.width} />
+                        <span className="input-seperator">,</span>
                         <DimensionInput datapoint="height" onUserInput={this.DimValueChanged} value={dimensions.height} />
                     </div>
-                    <input type="checkbox" ref="aspectRatioInput" name="aspect-ratio" onChange={this.aspectRatioChanged} id="set-aspect-ratio" checked={isRatioFixed} />
-                    <label id="img-height" htmlFor="set-aspect-ratio">Aspect Ratio</label>
-                </section>
+                    <div id="set-aspect-ratio-wrap">
+                        <input ref="aspectRatioInput" id="set-aspect-ratio" onChange={this.aspectRatioChanged} type="checkbox" checked={isRatioFixed} />
+                        <label htmlFor="set-aspect-ratio">Fix Aspect Ratio</label>
+                    </div>
+                </div>
             </section>
         );
     }
@@ -291,18 +409,57 @@ var DimensionInput = React.createClass({
         this.props.onUserInput(datapoint, value);
     },
     "render" : function() {
-        var label = this.props.datapoint.charAt(0).toUpperCase() + this.props.datapoint.slice(1),
+        var label = this.props.datapoint.charAt(0).toUpperCase() + this.props.datapoint.slice(1) + " :",
             inputId = "set-" + this.props.datapoint,
             value = this.props.value;
         return (
             <div className="input-wrap cf">
                 <span className="input-label">{label}</span>
-                <input ref="input" id={inputId} onChange={this.handleChange} className="input-value" type="text" value={value}/>
+                <input id={inputId} ref="input" onChange={this.handleChange} className="input-value" type="text" value={value} />
                 <span className="input-unit">px</span>
             </div>
         );
     }
 });
+
+var AddImageOffsetsWidget = React.createClass({
+    "handleInput" : function() {
+        var inputs = {
+            "top" : parseInt(this.refs.top.getDOMNode().value || 0, 10),
+            "left" : parseInt(this.refs.left.getDOMNode().value || 0, 10),
+            "right" : parseInt(this.refs.right.getDOMNode().value || 0, 10),
+            "bottom" : parseInt(this.refs.bottom.getDOMNode().value || 0, 10),
+        }
+        inputs.category = "addOffsets";
+        this.props.onUserInput(inputs);
+    },
+    "render" : function() {
+        var offsets = this.props.offsets;
+        return (
+            <section id="edit-canvas-widget" className="tool-panel-widget">
+                <div className="tool-panel-header">
+                    <p className="tool-panel-title">Cropping / Padding</p>
+                </div>
+                <div className="tool-panel-body">
+                    <form className="cf">
+                        <div className="canvas-layout border-box">
+                            <div className="editing border-box">
+                                <input type="text" ref="top" className="top" onChange={this.handleInput} value={offsets.top}/>
+                                <br />
+                                <input type="text" ref="left" className="left" onChange={this.handleInput} value={offsets.left}/>
+                                <div className="content border-box"></div>
+                                <input type="text" ref="right" className="right" onChange={this.handleInput} value={offsets.right}/>
+                                <br />
+                                <input type="text" ref="bottom" className="bottom" onChange={this.handleInput} value={offsets.bottom}/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        );
+    }
+})
+
 var reactComponent = React.render(
     // titleMessage is a prop
     <ImageEditor />,
