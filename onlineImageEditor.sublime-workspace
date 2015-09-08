@@ -1,0 +1,1281 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fltr",
+				"fltr-val__text"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"fg-c",
+				"fg-color-grey"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"get",
+				"getSelectedColor"
+			],
+			[
+				"colo",
+				"colorValue"
+			],
+			[
+				"is",
+				"isSelected"
+			],
+			[
+				"previous",
+				"previousValue"
+			],
+			[
+				"bg-color-",
+				"bg-color-gs3"
+			],
+			[
+				"backg",
+				"background-position"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"ima",
+				"image-2x"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"start",
+				"startInr"
+			],
+			[
+				"end",
+				"endInr"
+			],
+			[
+				"lp_",
+				"lp_current"
+			],
+			[
+				"ch",
+				"checked"
+			],
+			[
+				"List",
+				"ListPage"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"new",
+				"newSortby"
+			],
+			[
+				"inlin-",
+				"inline-block-margin"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fon-",
+				"font-weight"
+			],
+			[
+				"offset",
+				"offsetX"
+			],
+			[
+				"fg-color",
+				"fg-color-blue"
+			],
+			[
+				"scroll",
+				"scrollto"
+			],
+			[
+				"def",
+				"defaultRows"
+			],
+			[
+				"bg-color",
+				"bg-color-white"
+			],
+			[
+				"selec",
+				"selectedColor"
+			],
+			[
+				"data",
+				"dataPoints"
+			],
+			[
+				"dat",
+				"dataPoints"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"inline-bl",
+				"inline-block-margin"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"border-",
+				"border-color"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"m",
+				"margin-left"
+			],
+			[
+				"bordr",
+				"border-color"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"hourl",
+				"hourlyDeals"
+			],
+			[
+				"hour",
+				"getHourlyDeals"
+			],
+			[
+				"lis",
+				"list_filter"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"pop",
+				"popupWidth"
+			],
+			[
+				"list_f",
+				"list_filter_val"
+			],
+			[
+				"last",
+				"lastRoute"
+			],
+			[
+				"sub",
+				"subcomponent"
+			],
+			[
+				"filterIt",
+				"filterItemCont"
+			],
+			[
+				"url",
+				"urlQuery"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"handle",
+				"handlePushState"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"sc",
+				"scroll"
+			],
+			[
+				"thi",
+				"the-grid"
+			],
+			[
+				"sett",
+				"settings"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"max",
+				"maxPrice"
+			],
+			[
+				"para",
+				"paramValue"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"filter",
+				"filterBlock"
+			],
+			[
+				"filt",
+				"filterbar"
+			],
+			[
+				"sort",
+				"sortby"
+			],
+			[
+				"ind",
+				"indexOf"
+			],
+			[
+				"lp",
+				"lp_changes"
+			],
+			[
+				"close",
+				"closePopup"
+			],
+			[
+				"popup-",
+				"popup-closebutton"
+			],
+			[
+				"grid",
+				"gridsize"
+			],
+			[
+				"email",
+				"emailValue"
+			],
+			[
+				"user",
+				"usermanage"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"loca",
+				"localStorage"
+			],
+			[
+				"b",
+				"border-left"
+			],
+			[
+				"scr",
+				"script	Tag"
+			],
+			[
+				"n",
+				"nowrap"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"purcha",
+				"purchased"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"cre",
+				"createdAt〔variable〕"
+			],
+			[
+				"create",
+				"createdAt"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"extr",
+				"$extraInfo〔variable〕"
+			],
+			[
+				"bo",
+				"border-box〔value〕"
+			],
+			[
+				"borde",
+				"border-box"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"boe",
+				"border-box〔value〕"
+			],
+			[
+				"source",
+				"sourceX"
+			],
+			[
+				"IE",
+				"IE_image"
+			],
+			[
+				"inner",
+				"innerWidth〔variable〕"
+			],
+			[
+				"bore",
+				"border-box"
+			],
+			[
+				"I",
+				"IE_image"
+			],
+			[
+				"prev",
+				"prevMinPrice"
+			],
+			[
+				"parse",
+				"parseInt〔function〕"
+			],
+			[
+				"defau",
+				"defaults"
+			],
+			[
+				"list",
+				"listheader"
+			],
+			[
+				"lp_c",
+				"lp_clipbaord"
+			],
+			[
+				"pric",
+				"priceSlider"
+			],
+			[
+				"pre",
+				"prevMaxPrice"
+			],
+			[
+				"pr",
+				"priceSlider"
+			],
+			[
+				"price",
+				"priceToRange"
+			],
+			[
+				"ge",
+				"generateHash"
+			],
+			[
+				"list_",
+				"list_filter"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"in",
+				"instanceof"
+			],
+			[
+				"qu",
+				"queries"
+			],
+			[
+				"open",
+				"openPopup"
+			],
+			[
+				"min",
+				"minPrice"
+			],
+			[
+				"ven",
+				"vending-text"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"C",
+				"customer"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"sidebard",
+				"sidebardiv"
+			],
+			[
+				"e",
+				"expand"
+			],
+			[
+				"side",
+				"sidebardiv"
+			],
+			[
+				"touch",
+				"touchCount"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"you",
+				"your"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 661,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/modules/ImageEditor/ImageEditor.js",
+			"settings":
+			{
+				"buffer_size": 8141,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control:  ",
+				"Package Control: List Packages"
+			],
+			[
+				"enag",
+				"Package Control: Enable Package"
+			],
+			[
+				"goto",
+				"SublimeBookmarks: Goto Bookmark"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"JSLint"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"hash -r"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/modules",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/modules/ImageEditor"
+	],
+	"file_history":
+	[
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/resources/download_json.html",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/app.js",
+		"/Users/sagiavinashvarma/Documents/MSP/work/qa1_bkp/msp_board/js/app_ctrl.js",
+		"/Users/sagiavinashvarma/Documents/MSP/work/qa1_bkp/msp_board/js/app.js",
+		"/Users/sagiavinashvarma/Documents/MSP/work/qa1_bkp/msp_board/index.html",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/modules/AddImageOffsetsWidget/AddImageOffsetsWidget.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/modules/ImageEditor/ImageEditor.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/single.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/tasks/Gruntfile.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/app.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_list_page.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/msp.css",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_main.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_settings.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_search.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_sidebar.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_objects.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/msplist.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/search.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/widgets.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_helper.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_basic.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/list_page.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/msp.js",
+		"/Users/sagiavinashvarma/Downloads/untitled.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_pricetable.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/pdp.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/msplist-pack.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_product_page.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/msp.css",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/_objects.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/_component_navigation_bar.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/_basic.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/_component_carousel.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/comparables/public_html/assets/css/reset.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/msp.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css_compat/msp.less",
+		"/Users/sagiavinashvarma/Downloads/test.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/index.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/pdp-out-stock.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/category.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_functions.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_popup.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_navigation_bar.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_graph.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_footer.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_dropdown.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_header.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_carousel.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/utils.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/_component_compare_panel.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/list_old.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/signup.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/popup-targets.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/login.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/compare_panel.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/index_with_movable_header.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/deals-list.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/feedback.html",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/redesign/assets/css/_functions.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/popups/storePriceAlert.php",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/popups/offline_delivery.php",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/css/Gruntfile.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/common.js",
+		"/Users/sagiavinashvarma/Downloads/jquery.tinysort.min.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/offers.json",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/fashionSingle/v2/script_revamp.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/pricetable.js",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/js/offline.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_helper.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_basic.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/redesign/assets/data.json",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/Gruntfile.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_settings.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_objects.less",
+		"/Users/sagiavinashvarma/Documents/MSP/MSP-Github/msp-ui/sync.sh",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_component_pricetable.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_functions.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_component_product_page.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_component_list_page.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/widgets.html",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/listpage/msplist.pack.js",
+		"/Users/sagiavinashvarma/Library/Application Support/Sublime Text 3/Packages/Visual-Studio/Visual Studio Dark.tmTheme",
+		"/Users/sagiavinashvarma/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_component_navigation_bar.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/feedback.html",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/category.html",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_component_search.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_reset.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/_componenet_product_page.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/msp.css",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/js/single.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/rd/assets/css/msp.less",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/Redesign/msplist-pack copy.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/Redesign/msp.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/listpage/email_cap.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/Redesign/msplist-pack.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/Redesign/msp-list.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/listpage/msplist.css",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/pricetable/single.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/work/pricetable/msp.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/git/onlineImageEditor/src/modules/services.js",
+		"/Users/sagiavinashvarma/Downloads/Downloads/bower_components/requirejs/require.js",
+		"/Users/sagiavinashvarma/Downloads/zoomed_multi_image_popup.html",
+		"/Users/sagiavinashvarma/Downloads/jsbin.yigeqo.1.html",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/07_Basic_Inheritance/02_FromFunctionObject/01_From_Object.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/07_Basic_Inheritance/01_FromObjectInstance/07_04_Object_create.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/07_Basic_Inheritance/01_FromObjectInstance/07_05_prototype.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/02_03_Private_Variables_Uisng_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/02_02_SimpleMethod_Using_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/02_01_SimpleMethod_Using_prototype.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/05_Mixed_Class/05_01_Mixed_Class_With_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/07_Basic_Inheritance/01_FromObjectInstance/07_03___proto__.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/06_Dynamic_Objects/06_03_Dynamic_Objects_Injecting_Outside.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/06_Dynamic_Objects/06_02_Dynamic_Objects_With_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/06_Dynamic_Objects/06_01_Dynamic_Objects_With_new.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/05_Mixed_Class/05_03_Mixed_Class_With_prototype.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/05_Mixed_Class/05_02_Mixed_Class_With_new.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/04_Static_Class/04_01_StaticClass_Using_Object.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/01_02_SimpleClass_Using_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/04_Static_Class/04_02_StaticClass_Using_return.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/02_04_Private_Variables_with_prototype.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/03_Class/01_01_SimpleClass_Using_new.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/01_Scope_And_Context/06_call_VS_apply.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/01_Scope_And_Context/05_Using_apply.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/01_Scope_And_Context/04_Using_Call.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/01_Scope_And_Context/03_new_Function.js",
+		"/Users/sagiavinashvarma/Documents/Documents/WebDev/Learning/CoreJS/Solutions/01_Scope_And_Context/02_Object_Function.js"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"<current file>",
+			"",
+			"Gruntfile.js",
+			"elements.less",
+			"store.html",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"comp",
+			"natural",
+			"access",
+			"__ttl",
+			"list-main__ttl",
+			"150px",
+			"140px",
+			"__text",
+			"sdbr",
+			".algn-wrpr ",
+			"sdbr",
+			"algn-",
+			"disabled",
+			":disabled",
+			"disabled",
+			"--dsb",
+			"variant",
+			"--dsbl",
+			"val--dsbl",
+			"#d0d3dd",
+			"(func",
+			"show()",
+			"__cler",
+			"cntxt-link",
+			"#bbbbbb",
+			"text",
+			".text-",
+			"text-",
+			"&-dtls",
+			"__cler",
+			"netscape",
+			"16px",
+			"fltr__cle",
+			"-lbl",
+			"lbl",
+			"lobl",
+			"sortby",
+			"updatePageData",
+			"tableByFilter",
+			"updatePageData",
+			"templates",
+			"avlbl",
+			"ProductList.",
+			"ProductList",
+			".comp",
+			"js-fltr-ldng-mask",
+			"ldr",
+			"ldr__crcl",
+			"datapoints",
+			"isSelected",
+			"avlbl-clrs__inpt",
+			"inpt",
+			"getAppliedFilters",
+			" appliedFilter.",
+			"2px solid ",
+			"-sizes",
+			"solid trans",
+			"2px solid",
+			"2px",
+			"-clrs",
+			"-clr",
+			"avlbl",
+			"apiquery",
+			"startinr",
+			"price",
+			"ul",
+			"http://avi.mysmartprice.com/rd/",
+			"data-storename=\"",
+			"data-storename=\"\"",
+			"data-storename=\"tech\"",
+			"data-storename=\"n4u\"",
+			"btn-GTS btn-GTS--s js-prc-tbl__gts-btn js-prc-tb",
+			"btn-GTS btn-GTS--s js-prc-tbl__gts-btn js-prc-tbl__gts-btn js-popup-trgt js-check-email-cookie",
+			"scrollTo",
+			"sort",
+			"<div class=\"prc-tbl__cpn-info js-slct-trgr\">\n                                    		<span class=\"prc-tbl__cpn-code js-tltp js-slct-trgt\" data-tooltip=\"click to select coupon code\">HSBC15</span>",
+			"js-slct-",
+			"\" data-slct-trgt",
+			"<div class=\"prc-tbl__cpn-info\">\n                                    		<span class=\"prc-tbl__cpn-code js-slct-trgr js-tltp\" data-tooltip=\"click to select coupon code\" data-slct-trgt>HSBC15</span>",
+			"selectT",
+			"<span class=\"prc-tbl__cpn-code js-slct-txt js-tltp\" data-tooltip=\"click to select coupon code\">HSBC15</span>",
+			"select",
+			"js-slct-txt\">HSBC15</span>",
+			"<div class=\"prc-tbl__cpn-info\">\n                                    		<span class=\"prc-tbl__cpn-code js-slct-txt\">HSBC15</span>",
+			"fetch.",
+			"rate this",
+			"rate this ",
+			"submit review",
+			"16fgb",
+			"#8e8e93",
+			"#",
+			"#8e93a1",
+			"arrow",
+			"arw",
+			"pgn",
+			"ldng",
+			"ldr",
+			"drpd",
+			"$tim",
+			"menuShowTimeout",
+			"2000",
+			"$timer = $(\".cntdwn\");",
+			"drpdwn-menu-wrpr__ldng",
+			".drpdwn-menu-wrpr__ldng",
+			"ldng",
+			"ldng-crcl",
+			".ldng-crcl",
+			"ldng",
+			"drpdwn-menu-wrpr__ldng",
+			"ldng",
+			"ldng-crcl",
+			"star",
+			"hourlyDeals",
+			"<span class=\"btn-GTS__arw\">",
+			"-arw",
+			"offline",
+			"url",
+			"srch",
+			"search",
+			"xtrs",
+			"xtr",
+			".image",
+			"recent",
+			"review",
+			"price_val",
+			"e.png",
+			"prdct-dtl__slr-prc-btn",
+			"ORDER N"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"val--dsbld",
+			"rslt-ctgry",
+			"",
+			"<div class=\"prc-tbl__cpn-info js-slct-trgr js-tltp\" data-tooltip=\"click to select coupon code\">\n                                    		<span class=\"prc-tbl__cpn-code js-slct-trgt\">HSBC15</span>",
+			"\"",
+			"<div class=\"prc-tbl__cpn-info js-slct-trgr\">\n                                    		<span class=\"prc-tbl__cpn-code js-tltp js-slct-trgt\" data-tooltip=\"click to select coupon code\" data-slct-trgt>HSBC15</span>",
+			"<span class=\"prc-tbl__cpn-code js-slct-trgr js-tltp\" data-tooltip=\"click to select coupon code\" data-slct-trgt>HSBC15</span>",
+			"js-slct-txt js-tltp\" data-tooltip=\"click to select coupon code\">HSBC15</span>",
+			"<div class=\"prc-tbl__cpn-info js-slct-txt\">\n                                    		<span class=\"prc-tbl__cpn-code\">HSBC15</span>",
+			"icons/new",
+			"prop(\"checked\"",
+			"is(\":che",
+			"data-groupname=",
+			"<span class=\"prc-tbl__cpn-code js-slct-txt\">HSBC15</span>",
+			"ORDER NOW",
+			"prc-tbl__prc-drop",
+			"<div class=\"prc-tbl__prc-drop-wrpr\">\n                                    	<div class=\"prc-tbl__prc-drop-btn js-popup-trgt\" data-href=\"http://www.mysmartprice.com/promotions/pricealert.php?isbn=4804&productname=Samsung+Galaxy+Grand+Prime&bestprice=9990&ispopup=true\">Set Price Drop Alert</div>\n                                    	<div class=\"prc-tbl__prc-drop-scs\">Alert Set!</div>\n                                    </div>",
+			"_gaq",
+			"$doc.on",
+			"msg-box ",
+			"",
+			"rvws-usr",
+			"<div class=\"btn-GTS\">",
+			"<span class=\"prc-tbl__clm-gts-btn-arw\">&rsaquo;</span>",
+			"4.5/5",
+			"function()",
+			"].join('');",
+			"].join(''",
+			"join(' '",
+			"	",
+			"2 hours",
+			"initUrlQuery",
+			"urlQueryParams",
+			"loginClassbackQueue",
+			"appliedFilterQueue",
+			"filterGroupQueue",
+			"isOnLoad",
+			"data-tabid=\"claims_issues\"",
+			"coords",
+			"gridSize",
+			"y",
+			"x",
+			"popup-tab",
+			"popup-left-header",
+			"data-content",
+			"tab-id\ntabid",
+			"tab-id\ntab-id",
+			".widget-products .",
+			".widget-products ",
+			"rows: 14",
+			".widget-products",
+			"",
+			"<img alt=\"Load Images\" class=\"banner grid2\" src=\"http://placehold.it/250x250\" style=\"border: none;;\">",
+			"260",
+			"padding-bottom: 10px;",
+			"padding-top: 10px;",
+			"200x150",
+			"200x100",
+			"200x150",
+			"tshirt.jpg",
+			"canvas-layout",
+			"clipboard",
+			"xhrPerf",
+			"maxSlider",
+			"minSlider",
+			"freshData",
+			"action",
+			"filterControls",
+			"allTagsHtml",
+			"$(\".left_sidebar_wrapper\")",
+			"<div class='offer-percent'>(30% Off)</div><div class='offer-info'>",
+			"",
+			"-->",
+			"<div class='offer-percent'>(30% Off)</div><div class='offer-info'>",
+			" ",
+			".vending-list-item",
+			".vending-list",
+			"translateY",
+			"home",
+			"msp",
+			"filterReset\">Clear</span>",
+			"home",
+			"RS.",
+			")</span>",
+			"Count\">(",
+			"msp",
+			"home",
+			"msp",
+			"@media",
+			"@include ",
+			"$",
+			"@mixin ",
+			"elements",
+			"style",
+			"$",
+			"<a class=\"popup-target callout-target\" data-href=\"terms.php\" href=\"#\">Terms &amp; Conditions</a>",
+			"popups/getoffer.php",
+			"getoffer.php",
+			"<a class=\"get-btn btn btn-red btn-l popup-target callout-target\" data-href=\"getoffer.php\" href=\"#\">Get This Offer Now</a>",
+			"<a class=\"get-btn btn btn-red btn-l popup-target callout-target\" data-href=\"#btn-popup-content\" href=\"#\">Get This Offer Now</a>",
+			"http://0a139eea44aaa5b71501-dd7be9abd488a04eaa465c4563316f16.r46.cf1.rackcdn.com/terms_conditions.png",
+			"1 day",
+			"Get This Offer Now",
+			".table-user-transaction",
+			" class=\"btn btn-red\">See All Offers</a>",
+			"class=\"btn btn-red\">See All Offers</a>",
+			"class=\"btn btn-red\">Get Offer</a>",
+			"grid-item",
+			"#deals-bottom-banner",
+			"resources",
+			"",
+			"group-list init\"",
+			"item",
+			"",
+			"#appheader",
+			"active"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 661,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								260
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/modules/ImageEditor/ImageEditor.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2050,
+								2050
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 657.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 149.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "onlineImageEditor.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"wi",
+				"widgets.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"style.css",
+				"style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 288.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
